@@ -10,9 +10,15 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
 
-@CucumberOptions(features = "src/test/resources/features/login/login_logout.feature", glue = { "com/cucumberFramework/stepdefinitions" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
-		"json:target/cucumber-reports/CucumberTestReport.json", "rerun:target/cucumber-reports/rerun.txt" },
-		monochrome = true, dryRun = false)
+@CucumberOptions(
+		features = "src/test/resources/features/login/login_logout.feature",
+		glue = { "com/cucumberFramework/stepdefinitions" },
+		plugin = {
+				"pretty", "html:target/cucumber-reports/cucumber-pretty",
+				"json:target/cucumber-reports/CucumberTestReport.json", "rerun:target/cucumber-reports/rerun.txt"
+		},
+		monochrome = true,
+		dryRun = false)
 public class TestRunner {
 	
 	private TestNGCucumberRunner testNGCucumberRunner;
