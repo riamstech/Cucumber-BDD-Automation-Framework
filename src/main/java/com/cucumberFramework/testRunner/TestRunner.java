@@ -11,7 +11,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 
 @CucumberOptions(
-		features = "src/test/resources/features/login/login_logout.feature",
+		features = "src/test/resources/features/login/todoMVC.feature",
 		glue = { "com/cucumberFramework/stepdefinitions" },
 		plugin = {
 				"pretty", "html:target/cucumber-reports/cucumber-pretty",
