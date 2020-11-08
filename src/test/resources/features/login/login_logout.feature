@@ -1,4 +1,4 @@
-Feature: As a Amazon user I should be able to login and logout with valid credentials
+Feature: As a todoMVC user I want to manage my todo list
 
   Scenario: Addition & Deletion in ToDo List
     Given User on http://todomvc.com/examples/vue/ page

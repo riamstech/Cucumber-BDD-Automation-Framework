@@ -19,8 +19,12 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		 <allure.version>1.5.2</allure.version>
+<!--		 <allure.version>1.5.2</allure.version>-->
+		 <allure.version>2.10.0</allure.version>
 		<aspectj.version>1.8.10</aspectj.version>
+		<allure.cmd.download.url>
+			https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline
+		</allure.cmd.download.url>
 	</properties>
 
 	<dependencies>
@@ -131,7 +135,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>MyProjectName</projectName>  <!-- Replace with project name -->
+							<projectName>cucumberFramework</projectName>  <!-- Replace with project name -->
 							<outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
 							<cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
 							<buildNumber>1</buildNumber>
@@ -141,6 +145,17 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-maven</artifactId>
+				<version>2.10.0</version>
+				<configuration>
+					<reportVersion>${allure.version}</reportVersion>
+					<allureDownloadUrl>
+<!--						${allure.cmd.download.url}/${allure.version}/allure-commandline-${allure.version}.zip-->
+						file:///C:/Users/SouravS/Workspace/IdeaProjects/Cucumber-BDD-Automation-Framework/allure-commandline-2.10.0.zip					</allureDownloadUrl>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
